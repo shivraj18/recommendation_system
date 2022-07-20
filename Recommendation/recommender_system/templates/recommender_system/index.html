@@ -1,0 +1,15 @@
+{% extends "recommender_system/base.html" %}
+
+{% block title %}
+All Books
+{% endblock title %}
+{% block content %}
+
+<ul>
+    {% for book in books %}
+    <li>
+        <a href="{% url "book-title"%}?book_id={{book.book_id}}">{{book.title}}</a>
+    </li>
+    {% endfor %}    
+</ul>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "recommender_system/base.html" %}
+{% block title %}
+Suggested Books
+{% endblock title %}
+Suggested Books
+
+{% block content %}
+<h2> The 5 similar books are:</h2>
+<ul>
+    {% for book in books %}
+    <li>
+    {{book}}
+</li>
+{% endfor %}
+</ul>   
+{% endblock content %}
